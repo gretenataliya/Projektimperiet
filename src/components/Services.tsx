@@ -18,7 +18,7 @@ export default function Services() {
             Våra specialistområden
           </p>
 
-          <h2 className="text-4xl font-bold tracking-tight text-black md:text-5xl">
+          <h2 className="text-[clamp(2rem,9vw,3.5rem)] font-bold leading-tight tracking-tight text-black md:text-5xl">
             Specialistområden inom bygg och projektledning
           </h2>
         </div>
@@ -38,7 +38,9 @@ export default function Services() {
                 {title}
               </h3>
 
-              <p className="max-w-2xl leading-7 text-black/60">{text}</p>
+              <p className="max-w-2xl leading-7 text-black/60">
+                {text}
+              </p>
 
               <span className="flex h-10 w-10 items-center justify-center rounded-full border border-black/15 text-black transition group-hover:border-[#d6a950] group-hover:bg-[#d6a950]">
                 →
