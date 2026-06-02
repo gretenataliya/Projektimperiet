@@ -1,63 +1,48 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+:root {
+  color-scheme: light;
+  background: #ffffff;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html,
+html {
+  max-width: 100%;
+  scroll-behavior: smooth;
+  background: #ffffff;
+}
+
 body {
   max-width: 100%;
   overflow-x: hidden;
+  background: #ffffff;
 }
 
-img,
-video {
-  max-width: 100%;
-  height: auto;
+::selection {
+  background: #d7b56d;
+  color: #111111;
 }
 
-@media (max-width: 640px) {
-  section {
-    padding-top: 4.5rem !important;
-    padding-bottom: 4.5rem !important;
-  }
-
-  h1 {
-    font-size: clamp(2.2rem, 10vw, 3.4rem) !important;
-    line-height: 0.95 !important;
-    letter-spacing: -0.04em !important;
-  }
-
-  h2 {
-    font-size: clamp(1.8rem, 8vw, 2.7rem) !important;
-    line-height: 1.05 !important;
-  }
-
-  h3 {
-    font-size: 1.35rem !important;
-    line-height: 1.2 !important;
-  }
-
-  p {
-    font-size: 1rem !important;
-    line-height: 1.7 !important;
-  }
-
-  a,
-  button {
-    max-width: 100%;
-  }
-
-  .rounded-\[2\.5rem\] {
-    border-radius: 1.75rem !important;
-  }
-
-  .rounded-\[2rem\] {
-    border-radius: 1.5rem !important;
-  }
+button,
+a,
+input,
+textarea {
+  font: inherit;
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

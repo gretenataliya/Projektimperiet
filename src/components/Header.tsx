@@ -1,65 +1,80 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+
+const links = [
+  ["Hem", "/"],
+  ["Tjänster", "/#services"],
+  ["Projektområden", "/#project-areas"],
+  ["Process", "/#process"],
+  ["Kontakt", "/#contact"],
+];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <a href="/">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#111111]/95 text-white backdrop-blur-md">
+      <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
+        <Link href="/" aria-label="Projektimperiet AB">
           <Image
             src="/logo.png"
             alt="Projektimperiet AB"
             width={220}
             height={70}
-            className="h-auto w-[190px] md:w-[220px]"
+            className="h-auto w-[170px] md:w-[210px]"
+            style={{ height: "auto" }}
             priority
           />
-        </a>
+        </Link>
 
-        <nav className="hidden items-center gap-10 md:flex">
-          <a href="#" className="text-sm font-medium text-white transition hover:text-[#d6a950]">Hem</a>
-          <a href="#services" className="text-sm font-medium text-white transition hover:text-[#d6a950]">Tjänster</a>
-          <a href="#about" className="text-sm font-medium text-white transition hover:text-[#d6a950]">Om oss</a>
-          <a href="#contact" className="text-sm font-medium text-white transition hover:text-[#d6a950]">Kontakt</a>
+        <nav className="hidden items-center gap-9 md:flex">
+          {links.map(([label, href]) => (
+            <a
+              key={label}
+              href={href}
+              className="text-sm font-medium text-white/[0.72] transition hover:text-[#d7b56d]"
+            >
+              {label}
+            </a>
+          ))}
         </nav>
 
-        <a
-          href="#contact"
-          className="hidden rounded-full bg-[#d6a950] px-6 py-3 text-sm font-semibold text-black transition hover:bg-white md:inline-flex"
-        >
-          Starta projekt
-        </a>
+          <Link
+            href="/#contact"
+            className="hidden border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-[#111111] md:inline-flex"
+          >
+            Kontakt
+          </Link>
 
         <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex flex-col gap-1.5 md:hidden"
+          type="button"
+          onClick={() => setIsOpen((value) => !value)}
+          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 text-white md:hidden"
           aria-label="Öppna meny"
+          aria-expanded={isOpen}
         >
-          <span className="h-0.5 w-7 bg-white" />
-          <span className="h-0.5 w-7 bg-white" />
-          <span className="h-0.5 w-7 bg-white" />
+          <span className="h-px w-7 bg-current" />
+          <span className="h-px w-7 bg-current" />
+          <span className="h-px w-7 bg-current" />
         </button>
       </div>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-black px-6 py-6 md:hidden">
-          <nav className="flex flex-col gap-5">
-            <a onClick={() => setIsOpen(false)} href="#" className="text-white hover:text-[#d6a950]">Hem</a>
-            <a onClick={() => setIsOpen(false)} href="#services" className="text-white hover:text-[#d6a950]">Tjänster</a>
-            <a onClick={() => setIsOpen(false)} href="#about" className="text-white hover:text-[#d6a950]">Om oss</a>
-            <a onClick={() => setIsOpen(false)} href="#contact" className="text-white hover:text-[#d6a950]">Kontakt</a>
-
-            <a
-              onClick={() => setIsOpen(false)}
-              href="#contact"
-              className="mt-2 w-fit rounded-full bg-[#d6a950] px-6 py-3 text-sm font-semibold text-black"
-            >
-              Starta projekt
-            </a>
+        <div className="border-t border-white/10 bg-[#111111] px-5 py-6 sm:px-8 md:hidden">
+          <nav className="flex flex-col divide-y divide-white/10 border-y border-white/10">
+            {links.map(([label, href]) => (
+              <a
+                key={label}
+                onClick={() => setIsOpen(false)}
+                href={href}
+                className="py-5 text-xl font-medium text-white transition hover:text-[#d7b56d]"
+              >
+                {label}
+              </a>
+            ))}
           </nav>
         </div>
       )}

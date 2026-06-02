@@ -1,31 +1,26 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-export const metadata = {
-  title: "Projektimperiet AB | Projektledning inom bygg och anläggning",
+export const metadata: Metadata = {
+  title: "Projektimperiet AB",
   description:
-    "Projektimperiet AB erbjuder projektledning, projektstyrning och teknisk samordning för BRF:er, fastighetsägare, entreprenörer och beställare.",
-
-  icons: {
-    icon: "/favicon.png",
-  },
+    "Projektledning, byggledning och beställarstöd inom bygg- och anläggningsprojekt.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="sv">
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

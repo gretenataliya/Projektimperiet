@@ -1,50 +1,45 @@
 const benefits = [
-  "Hög teknisk och ekonomisk kompetens",
-  "Erfarenhet från komplexa byggprojekt",
-  "Stark beställarförståelse",
-  "Personligt engagemang i varje uppdrag",
+  "Säkerställer kvalitet i varje skede",
+  "Skyddar tidplan och budget",
+  "Skapar tydlighet mellan parter",
+  "Förebygger problem innan de blir kostsamma",
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-white py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="overflow-hidden rounded-[2.5rem] bg-black p-8 text-white md:p-14">
-          <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-            <div>
-              <p className="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-[#d6a950]">
-                Varför välja oss?
-              </p>
+    <section className="bg-[#111111] px-5 py-20 text-white sm:px-8 md:py-28 lg:px-12">
+      <div className="mx-auto max-w-[1500px]">
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-[#d7b56d]">
+              Varför Projektimperiet
+            </p>
 
-              <h2 className="max-w-xl text-4xl font-bold leading-tight tracking-tight md:text-5xl">
-                Trygg styrning för bättre byggprojekt.
-              </h2>
-
-              <p className="mt-7 max-w-lg text-lg leading-8 text-white/65">
-                Vi kombinerar teknisk kompetens, ekonomisk förståelse och tydlig
-                kommunikation för att skapa trygghet från start till mål.
-              </p>
-            </div>
-
-            <div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {benefits.map((benefit) => (
-                  <div
-                    key={benefit}
-                    className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#d6a950]/60 hover:bg-white/[0.08]"
-                  >
-                    <p className="text-lg font-bold leading-snug">{benefit}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-5 rounded-[1.5rem] bg-[#d6a950] p-7 text-black">
-                <p className="text-xl font-bold leading-snug">
-                  Fokus på kvalitet, tydlighet och resultat i varje uppdrag.
-                </p>
-              </div>
-            </div>
+            <h2 className="text-[34px] font-medium leading-[1.05] tracking-[-0.025em] sm:text-[44px] md:text-[58px]">
+              Tydlig styrning gör komplexa projekt lättare att leda.
+            </h2>
           </div>
+
+          <p className="max-w-xl text-base leading-7 text-white/60 md:text-lg md:leading-8 lg:col-span-4 lg:col-start-9">
+            Vi kombinerar teknisk förståelse med strukturerad kommunikation,
+            affärsmässig kontroll och ett tydligt beställarperspektiv.
+          </p>
+        </div>
+
+        <div className="mt-16 divide-y divide-white/[0.15] border-y border-white/[0.15]">
+          {benefits.map((benefit, index) => (
+            <div
+              key={benefit}
+              className="grid gap-4 py-7 md:grid-cols-[96px_1fr] md:items-center"
+            >
+              <span className="text-xs uppercase tracking-[0.16em] text-[#d7b56d]">
+                0{index + 1}
+              </span>
+              <p className="text-2xl font-medium tracking-[-0.02em] text-white md:text-4xl">
+                {benefit}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
