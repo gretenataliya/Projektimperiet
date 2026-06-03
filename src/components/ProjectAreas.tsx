@@ -3,18 +3,18 @@ import Image from "next/image";
 const areas = [
   {
     title: "Byggprojekt",
-    text: "Nybyggnationer inom både offentlig och privat sektor, exempelvis bostäder, kommersiella fastigheter och samhällsfastigheter.",
-    image: "/hero.png",
+    text: "Projektledning för nybyggnationer inom offentlig och privat sektor, från bostäder och kommersiella fastigheter till samhällsfastigheter.",
+    image: "/byggprojekt.jpg",
   },
   {
     title: "ROT-projekt",
-    text: "Renovering, ombyggnad och tillbyggnad av befintliga fastigheter där planering, samordning och hänsyn till pågående verksamhet är avgörande.",
-    image: "/om-oss.jpg",
+    text: "Stöd vid renovering, ombyggnad och tillbyggnad där planering, samordning och hänsyn till boende eller verksamhet är avgörande.",
+    image: "/rot-projekt.jpg",
   },
   {
     title: "Anläggningsprojekt",
-    text: "Mark och anläggning, exempelvis finplanering, gator, VA, infrastruktur, markarbeten och offentliga miljöer.",
-    image: "/hero.png",
+    text: "Samordning av mark- och anläggningsprojekt, exempelvis finplanering, gator, VA, infrastruktur, markarbeten och offentliga miljöer.",
+    image: "/anlaggningsprojekt.png",
   },
 ];
 
@@ -29,13 +29,12 @@ export default function ProjectAreas() {
             </p>
 
             <h2 className="max-w-5xl text-[34px] font-medium leading-[1.06] tracking-[-0.025em] sm:text-[44px] md:text-[58px]">
-              Byggprojekt, ROT-projekt och anläggningsprojekt.
+              Byggprojekt, ROT-projekt och anläggningsprojekt
             </h2>
           </div>
 
           <p className="max-w-xl text-base leading-7 text-[#111111]/[0.62] md:text-lg md:leading-8 lg:col-span-4">
-            Vi säkerställer att projekten genomförs enligt krav, handlingar och
-            uppsatta mål, oavsett projektets omfattning.
+            Vi leder och samordnar bygg- och anläggningsprojekt med fokus på kvalitet, tidplan, ekonomi och tydliga beslutsvägar.
           </p>
         </div>
 

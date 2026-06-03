@@ -34,9 +34,7 @@ export default function Statement() {
         </h2>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/65">
-          Vi tror på tydlighet, struktur och ansvar genom hela
-          byggprocessen. Vårt mål är att skapa trygghet för
-          beställaren i varje skede.
+          Kontroll över tid, ekonomi och kvalitet genom hela byggprocessen.
         </p>
       </div>
     </section>

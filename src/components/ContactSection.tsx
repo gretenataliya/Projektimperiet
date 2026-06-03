@@ -9,7 +9,7 @@ export default function ContactSection() {
             </p>
 
             <h2 className="max-w-2xl text-[34px] font-medium leading-[1.06] tracking-[-0.025em] sm:text-[44px] md:text-[58px]">
-              Vill du diskutera ett projekt?
+              Låt oss prata om ditt projekt.
             </h2>
 
             <p className="mt-7 max-w-xl text-base leading-7 text-white/65 md:text-lg md:leading-8">

@@ -78,12 +78,10 @@ export default function Hero() {
           </p>
 
           <h1 className="max-w-5xl text-[2rem] font-medium leading-[0.98] tracking-[-0.045em] text-white sm:text-5xl md:text-[4.25rem]">
-            Vi leder bygg- och anläggningsprojekt från idé till överlämning.
-          </h1>
+            Projektledning, byggledning och beställarstöd för bygg- och anläggningsprojekt          </h1>
 
           <p className="mt-6 max-w-xl text-sm leading-6 text-white/75 sm:max-w-2xl sm:text-base sm:leading-7 md:text-lg md:leading-8">
-            Projektledning, byggledning och beställarstöd för bygg-, ROT- och
-            anläggningsprojekt.
+            Vi hjälper kommuner, fastighetsutvecklare, fastighetsägare och BRF:er genom hela byggprocessen, från planering till överlämning.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">

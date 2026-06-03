@@ -6,27 +6,27 @@ import { useState } from "react";
 const items = [
   {
     title: "Tydlighet",
-    text: "Vi skapar struktur kring mål, förutsättningar, ansvar och kommunikation så att alla parter vet vad som gäller.",
-    points: ["Mål", "Ansvar", "Kommunikation"],
-    image: "/hero.png",
+    text: "Vi säkerställer att mål, ansvar och kommunikation är tydliga från start till mål.",
+    points: ["Målbild", "Ansvarsfördelning", "Kommunikation"],
+    image: "/tydlighet.jpg",
   },
   {
     title: "Struktur",
-    text: "Vi följer upp tid, ekonomi, kvalitet och risker för att projektet ska drivas effektivt och kostnadskontrollerat.",
-    points: ["Tidplan", "Budget", "Kvalitet"],
-    image: "/om-oss.jpg",
+    text: "Vi skapar kontroll genom löpande uppföljning av tidplan, ekonomi, kvalitet och risker.",
+    points: ["Tidplan", "Ekonomi", "Kvalitet"],
+    image: "/struktur.jpg",
   },
   {
     title: "Samarbete",
-    text: "Vi arbetar nära beställare, konsulter och entreprenörer för att skapa tydlighet mellan alla parter.",
+    text: "Vi samordnar beställare, konsulter och entreprenörer för att skapa framdrift och god kommunikation genom hela projektet.",
     points: ["Samordning", "Byggmöten", "Rapportering"],
-    image: "/hero.png",
+    image: "/samarbete.jpg",
   },
   {
     title: "Förebyggande",
-    text: "Vi arbetar proaktivt för att förebygga problem innan de uppstår och skapa hållbara lösningar med långsiktigt värde.",
-    points: ["Risker", "Beslut", "Långsiktigt värde"],
-    image: "/om-oss.jpg",
+    text: "Vi identifierar risker tidigt och arbetar proaktivt för att skapa bättre förutsättningar för projektets genomförande.",
+    points: ["Riskhantering", "Beslutsunderlag", "Långsiktigt värde"],
+    image: "/forebyggande.jpg",
   },
 ];
 
@@ -47,13 +47,12 @@ export default function WhyChooseUs() {
             </p>
 
             <h2 className="max-w-5xl text-[34px] font-medium leading-[1.06] tracking-[-0.025em] sm:text-[44px] md:text-[58px]">
-              Tydlighet, struktur och nära samarbete.
+              Vårt arbetssätt
             </h2>
           </div>
 
           <p className="max-w-xl text-base leading-7 text-[#111111]/[0.62] md:text-lg md:leading-8 lg:col-span-4">
-            Genom god kommunikation och ett lösningsorienterat arbetssätt
-            skapar vi effektiva projekt med hög kvalitet och långsiktigt värde.
+            Vi tror på tydlighet, struktur och nära samarbete. Genom god kommunikation och ett lösningsorienterat arbetssätt skapar vi effektiva projekt med hög kvalitet och långsiktigt värde.
           </p>
         </div>
 
@@ -72,16 +71,15 @@ export default function WhyChooseUs() {
 
             <div className="absolute inset-x-0 bottom-0 p-7 text-white sm:p-9">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#d7b56d]">
-                100%
+                Projektimperiet AB
               </p>
 
               <h3 className="max-w-xl text-[34px] font-medium leading-[1.04] tracking-[-0.025em] md:text-[48px]">
-                Fokus på kvalitet
+                Beställarens perspektiv
               </h3>
 
               <p className="mt-5 max-w-md text-base leading-7 text-white/[0.72]">
-                Vi tror på tydlighet, struktur och ansvar genom hela
-                byggprocessen.
+                Vi representerar alltid beställarens intressen och arbetar för att skapa kontroll, tydlighet och framdrift genom hela projektet.
               </p>
 
               <a

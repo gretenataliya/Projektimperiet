@@ -3,24 +3,21 @@ import Image from "next/image";
 const services = [
   {
     title: "Projektledning",
-    text: "Planering, upphandling, ekonomi och styrning genom hela projektet.",
+    text: "Projektledning för bygg- och anläggningsprojekt med fokus på tid, ekonomi, kvalitet och riskhantering genom hela projektets livscykel.",
     link: "/projektledning",
-    image: "/hero.png",
-    label: "01",
+    image: "/projektledning.png",
   },
   {
     title: "Byggledning",
-    text: "Kontroll, samordning och uppföljning ute i produktionen.",
+    text: "Byggledning som säkerställer att entreprenaden genomförs enligt tidplan, kontrakt, handlingar och uppsatta projektmål.",
     link: "/byggledning",
-    image: "/om-oss.jpg",
-    label: "02",
+    image: "/byggledning.jpg",
   },
   {
     title: "Beställarstöd",
-    text: "Rådgivning och stöd från tidiga beslut till överlämning.",
+    text: "Beställarstöd genom hela byggprocessen, från tidiga utredningar och upphandling till slutbesiktning och överlämning.",
     link: "/bestallarstod",
-    image: "/hero.png",
-    label: "03",
+    image: "/bestallarstod1.png",
   },
 ];
 
@@ -40,8 +37,7 @@ export default function Services() {
           </div>
 
           <p className="max-w-xl text-sm leading-6 text-[#111111]/[0.62] sm:text-base sm:leading-7 md:text-lg md:leading-8 lg:col-span-4">
-            Tre tydliga tjänster som hjälper beställare att skapa struktur,
-            kontroll och trygghet genom hela byggprocessen.
+            Vi hjälper kommuner, fastighetsutvecklare, fastighetsägare och bostadsrättsföreningar att planera, styra och följa upp bygg- och anläggningsprojekt från första beslut till färdig överlämning.
           </p>
         </div>
 
@@ -51,9 +47,11 @@ export default function Services() {
               key={service.title}
               href={service.link}
               className={`group relative min-h-[360px] overflow-hidden bg-[#111111] sm:min-h-[460px] ${
-                index === 0
-                  ? "lg:col-span-7 lg:min-h-[520px]"
-                  : "lg:col-span-5 lg:min-h-[250px] xl:min-h-[250px]"
+               index === 0
+               ? "lg:col-span-7 lg:min-h-[520px]"
+               : index === 2
+               ? "lg:col-span-6 lg:min-h-[250px]"
+               : "lg:col-span-5 lg:min-h-[250px]"
               }`}
             >
               <Image
