@@ -69,9 +69,7 @@ export default function Services() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/[0.84] via-black/[0.3] to-transparent" />
 
               <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
-                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#d7b56d] sm:mb-5">
-                  {service.label}
-                </p>
+                
 
                 <h3
                   className={`font-medium leading-[1.04] tracking-[-0.025em] text-white ${
